@@ -1,9 +1,9 @@
 const postHandlers = require("./index");
 
-describe('Endpoints', () => {
-  describe('posts', () => {
+describe("Endpoints", () => {
+  describe("posts", () => {
     /* for ejecute one test change word it.skip for only it.only*/
-    it('should create', async () => {
+    it("should create", async () => {
       const mockUsers = [{ id: 1 }, { id: 2 }];
       /* pass parameters in body method post */
 
@@ -30,7 +30,7 @@ describe('Endpoints', () => {
 
       /* waiting for the object to be sent to the user */
       expect(res.send.mock.calls).toEqual([[{ id: 1000 }]]);
-      expec(axios.get.mock.calls).toEqual([
+      expect(axios.get.mock.calls).toEqual([
         ["https://jsonplaceholder.typicode.com/users"]
       ]);
       expect(axios.post.mock.calls).toEqual([
