@@ -11,6 +11,6 @@ app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 
 const postsHandlers = posts({ axios });
-app.post('/',authenticate, postHandlers.post);
+app.post('/',authenticate, postsHandlers.post);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}`));
